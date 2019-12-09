@@ -1,26 +1,7 @@
-<script type="module">
-import {html,render} from '../node_modules/lit-html/lit-html.js';
-import {Single, Fill} from '/scripts/Engine.js';
-import '/pieces/myHeader.js';
-import '/pieces/myInput.js';
-
-const handleClick= {
-    handleEvent(e){
-        console.log('clicked');
-    }, capture: true
-}
-
-const handleChange = (e) => {
-    console.log(e.target.value);
-    var base = e.target.value;
-    var result = Single(base, 0);
-}
-const myTemplate = html`
-<my-header myText="Fake Word Generator"></my-header>
-<label>Put letters here elem
-    <my-input .handleChange=${handleChange}></my-input>
-</label>
-`; 
-
-render(myTemplate, document.body);
-</script>
+<head>
+    <Title>Regular Html Title</Title>
+</head>
+<body>
+    <my-main></my-main>
+    <script type="module" src="./pieces/main.js"></script>
+</body>
