@@ -1,8 +1,8 @@
 <script type="module">
 import {html,render} from '../node_modules/lit-html/lit-html.js';
-import {inputTemplate} from '/pieces/inputBox.js';
 import {Single, Fill} from '/scripts/Engine.js';
 import '/pieces/myHeader.js';
+import '/pieces/myInput.js';
 
 const handleClick= {
     handleEvent(e){
@@ -17,7 +17,9 @@ const handleChange = (e) => {
 }
 const myTemplate = html`
 <my-header myText="Fake Word Generator"></my-header>
-<div>${inputTemplate(handleChange)}</div>
+<label>Put letters here elem
+    <my-input .handleChange=${handleChange}></my-input>
+</label>
 `; 
 
 render(myTemplate, document.body);
